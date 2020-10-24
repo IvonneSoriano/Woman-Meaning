@@ -1,0 +1,57 @@
+@import './theme';
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Satisfy&display=swap');
+body{
+    font-family: 'Roboto Slab', serif;
+}
+
+button, input{
+    outline: none!important;
+}
+
+.tab{
+    padding: 5px 10px;
+    border: none;
+    display: block;
+    width: 100%;
+    font-family: 'Satisfy', cursive;
+    position: relative;
+    font-size: 1.5rem;
+    background-color: rgba($color:$secondary, $alpha:0.2);
+    .icon{
+        display: block;
+        img{
+         
+        width: 25px;
+        height: 25px;
+        }
+    }
+    &.q{
+        &::after{
+            right: 0;
+            left: unset;
+        }
+    }
+
+    &::after{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        height: 3px;
+        background-color: $main;
+        width: 0%;
+        left: 0;
+        transition: 0.3s ;
+    }
+ 
+    &:hover{
+        background-color: rgba($color:$secondary, $alpha:0.7);
+    }
+    &.active{
+        background-color: rgba($color:$secondary, $alpha:0.5);
+        &::after{
+            height: 3px;
+            width: 100%;
+        }
+    }
+}
