@@ -1,1 +1,16 @@
-<p>question-card works!</p>
+<div class="question-card d-flex align-items-center justify-content-center">
+    <div class="q-card">
+        <h3 class="f-main text-center mb-5">Pregunta {{num+1}}</h3>
+        <p class="question_quote text-center mb-5">{{questions[num]}}</p>
+        <div class="pointers f-white">
+            <button class="btn" *ngFor="let point of points"
+                [ngClass]="{'selected': pxq[num]==point, 'unSelected': pxq[num]!=point, 'bg-second': num%2==0, 'bg-main': num%2!=0 }"
+                (click)="selectPoint(point,num)">
+                {{point}}
+            </button>
+        </div>
+    </div>
+</div>
+<div class="p-4">
+    <app-operational-buttons [num]="num"></app-operational-buttons>
+</div>

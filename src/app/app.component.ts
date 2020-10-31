@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CalculatePointService } from './services/calculate-point.service';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,20 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'WomanANDMeaning';
-  public question:boolean=true;
+
+  public question:boolean = true;
+
+  constructor(private calculateService:CalculatePointService){
+
+  }
+
+  ngOnInit(): void {
+    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    //Add 'implements OnInit' to the class.
+    this.calculateService.$save.subscribe(res => {
+      if(res){
+        this.question = false;
+      }
+    })
+  }
 }

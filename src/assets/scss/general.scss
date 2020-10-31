@@ -5,8 +5,37 @@ body{
     font-family: 'Roboto Slab', serif;
 }
 
-button, input{
+button, input, .btn{
     outline: none!important;
+}
+
+.f-main{
+    color: $main;
+}
+
+.f-main-dark{
+    color: $main-dark;
+}
+
+.f-main-light{
+    color: $main-light;
+}
+.f-white{
+    color: white;
+}
+.bg-main{
+    background-color: $main;
+}
+
+.bg-second{
+    background-color: $secondary!important;
+    &:hover{
+        background-color: $secondary-dark!important;
+    }
+}
+
+.selected{
+    background-color: $secondary-dark!important;
 }
 
 .tab{
@@ -55,3 +84,5 @@ button, input{
         }
     }
 }
+
+ 

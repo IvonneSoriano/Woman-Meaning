@@ -1,29 +1,29 @@
 <section class="container-fluid main">
-<div class="container">
-  <h1>Rueda de la vida</h1>
-  <div class="chart mx-auto mb-5">
-    <div class="chart__head w-100 d-flex align-items-center">
-      <button class="col-6 tab active q" [ngClass]="{active: question}" (click)="question=true">
-        <span class="icon">
-          <img src="assets/img/icons/question.svg" alt="">
-        </span>
-        Cuestionario
-      </button>
-      <button class="col-6 tab" [ngClass]="{active: !question}" (click)="question=false">
-        <span class="icon">
-          <img src="assets/img/icons/pie-chart.svg" alt="">
-        </span>
-        Resultados</button>
-    </div>
-    <div class="panel">
-      <div class="panel__item questions" [ngClass]="{active: question}" >
-        <h2>Preguntitas</h2>
+  <div class="container">
+    <h1>Rueda de la vida</h1>
+    <div class="chart mx-auto mb-5">
+      <div class="chart__head w-100 d-flex align-items-center">
+        <button class="col-6 tab active q" [ngClass]="{active: question}" (click)="question=true">
+          <span class="icon">
+            <img src="assets/img/icons/question.svg" alt="">
+          </span>
+          Cuestionario
+        </button>
+        <button class="col-6 tab" [ngClass]="{active: !question}" (click)="question=false">
+          <span class="icon">
+            <img src="assets/img/icons/pie-chart.svg" alt="">
+          </span>
+          Resultados</button>
       </div>
-      <div class="panel__item results" [ngClass]="{active: !question}">
-<h2>Respuestitas</h2>
+      <div class="panel">
+        <div class="panel__item questions" [ngClass]="{active: question}">
+          <app-question-card></app-question-card>
+        </div>
+        <div class="panel__item results" [ngClass]="{active: !question}">
+          <app-answer-card></app-answer-card>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<app-footer></app-footer>
+  <app-footer></app-footer>
 </section>

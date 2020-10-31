@@ -1,0 +1,8 @@
+<div class="d-flex align-items-center justify-content-between">
+    <button class="btn bg-main" (click)="back()" [disabled]="num==0" [ngClass]="{'hidden': num==0}">Anterior</button>
+
+    <button class="btn bg-main" (click)="next()" [hidden]="num == last">Siguiente</button>
+
+    <button class="btn bg-second" (click)="save()" [hidden]="num != last">Guardar</button>
+
+</div>
