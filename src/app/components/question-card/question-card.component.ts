@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { QuestionsService } from '../../services/questions.service';
 import { CalculatePointService } from '../../services/calculate-point.service';
+import  {Question } from '../../model/question';
 
 @Component({
   selector: 'app-question-card',
@@ -9,15 +10,18 @@ import { CalculatePointService } from '../../services/calculate-point.service';
 })
 export class QuestionCardComponent implements OnInit {
 
+  maxGrade:number = 10;
   num: number =0;
-  questions: string[];
-  points: number[];
+  questions: object[];
+  points: number[] = [];
   pxq: object;
 
   constructor(private questionsService:QuestionsService,
   private calculatePoint: CalculatePointService) { 
+    //Test
+    //this.questionsService.countQuestionXType();
     this.questions = this.questionsService.getQuestions();
-    this.points = this.questionsService.getPoints();
+    this.getPoints();
     this.pxq = this.calculatePoint.getPointXQuestions();
     }
 
@@ -36,11 +40,21 @@ export class QuestionCardComponent implements OnInit {
   }
 
   selectPoint(point:number, question){
-    this.calculatePoint.setPointXQuestion(question, point);
+    this.calculatePoint.setPointXQuestion(this.questions[question]["id"], point, this.questions[question]["type"]);
     this.pxq = this.calculatePoint.getPointXQuestions();
-    if(this.num != this.questionsService.getLastQuestion()){
+    setTimeout(() => {
+      if(this.num != this.questionsService.getLastQuestion()){
 
-      this.num++;
+        this.num++;
+      }
+    },700);
+   
+  }
+
+  getPoints(){
+    for (let index = 0; index < this.maxGrade; index++) {
+      this.points.push(index+1);
+      
     }
   }
 

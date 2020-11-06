@@ -1,4 +1,7 @@
 @import '../../../assets/scss/general';
 .footer{
     background-color: $main-dark;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
 }

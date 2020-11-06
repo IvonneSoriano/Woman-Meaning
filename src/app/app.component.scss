@@ -6,7 +6,7 @@
     background-size: cover;
     .chart{
         background-color: white;
-        height: calc(100vh - 150px);
+        height: calc(100vh - 250px);
         .panel{
             position: relative;
             height: calc(100% - 82px);
@@ -24,7 +24,7 @@
                     height: 100%;
                 }
                 &.results{
-                    background-color: green;
+                    background-color: white;
                 }
                 &.active{
                     left: 0;

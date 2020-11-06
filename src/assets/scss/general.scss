@@ -5,10 +5,6 @@ body{
     font-family: 'Roboto Slab', serif;
 }
 
-button, input, .btn{
-    outline: none!important;
-}
-
 .f-main{
     color: $main;
 }
@@ -23,8 +19,15 @@ button, input, .btn{
 .f-white{
     color: white;
 }
+
 .bg-main{
     background-color: $main;
+    &:hover{
+        background-color: $main-light!important;
+    }
+    &.selected{
+        background-color: $main-light!important;
+    }
 }
 
 .bg-second{
@@ -32,11 +35,12 @@ button, input, .btn{
     &:hover{
         background-color: $secondary-dark!important;
     }
+    &.selected{
+        background-color: $secondary-dark!important;
+    }
 }
 
-.selected{
-    background-color: $secondary-dark!important;
-}
+
 
 .tab{
     padding: 5px 10px;
@@ -78,6 +82,7 @@ button, input, .btn{
     }
     &.active{
         background-color: rgba($color:$secondary, $alpha:0.5);
+        box-shadow: 0px 0 8px rgba(0,0,0,0.16);
         &::after{
             height: 3px;
             width: 100%;
