@@ -31,6 +31,12 @@ export class CalculatePointService {
 
   }
 
+  isAllAnswered(total:number){
+    console.log(total);
+    console.log(this.points.length)
+    return total === this.points.length && this.points.every(p => p["grade"]!=null) ? true : false;
+  }
+
   getPointsByType(){
     let aux = [];
     types.forEach(t => {

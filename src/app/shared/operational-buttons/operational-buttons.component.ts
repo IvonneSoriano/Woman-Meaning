@@ -10,17 +10,28 @@ import { QuestionsService } from 'src/app/services/questions.service';
 export class OperationalButtonsComponent implements OnInit {
 
   @Input() num;
+  saveFocus = false;
   last:number;
 
   constructor(
     private questionsService:QuestionsService,
     private calculateService: CalculatePointService
   ) {
-    this.last = this.questionsService.getLastQuestion();
+    this.last = this.questionsService.getLastQuestion()-1;
     
    }
 
   ngOnInit(): void {
+    
+    console.log(`El num es ${this.num}`)
+    this.questionsService.$lastQuestion.subscribe(res => {
+      console.log(`La respuesta es ${res}`)
+      if(res){
+        if(this.calculateService.isAllAnswered(this.num+1)){
+          this.saveFocus=true;
+        }
+      }
+    })
   }
 
   back(){
@@ -32,7 +43,7 @@ export class OperationalButtonsComponent implements OnInit {
   }
 
   save(){
-    this.calculateService.$save.emit(true);
+    setTimeout(() => this.calculateService.$save.emit(true), 300 );
   }
 
 }

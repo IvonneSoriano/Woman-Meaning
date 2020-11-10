@@ -4,4 +4,7 @@
     height: 50px;
     position: absolute;
     bottom: 0;
+    @media (max-width:768px) {
+        position: relative;
+    }
 }

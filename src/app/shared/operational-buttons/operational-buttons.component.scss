@@ -1,6 +1,16 @@
-.btn{
+@import '../../../assets/scss/theme';
+
+.btn {
     transition: opacity 0.3s;
-    &.hidden{
+
+    &.hidden {
         opacity: 0;
+    }
+
+    &.focus {
+        position: relative;
+        border: 1px solid $main;
+        color: $main;
+        font-weight: 600;
     }
 }

@@ -63,7 +63,8 @@ export class AnswerCardComponent implements OnInit {
         }]
       },
       options: {
-        maintainAspectRatio: true,
+        responsive: true,
+        maintainAspectRatio: false,
         spanGaps: false,
         elements: {
           line: {

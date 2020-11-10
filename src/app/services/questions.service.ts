@@ -14,6 +14,10 @@ export class QuestionsService {
    */
   $num = new EventEmitter<boolean>(true);
 
+    /*
+   Para poder saber si es la última pregunta*/
+   $lastQuestion = new EventEmitter<boolean>(false);
+
   constructor() {
    }
 
@@ -36,7 +40,8 @@ export class QuestionsService {
   }
 
   getLastQuestion(){
-    return this.questions.length-1;
+    console.log(`La cantidad de preguntas son ${this.questions.length}`);
+    return this.questions.length;
   }
 
   getType(id:number){

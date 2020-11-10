@@ -1,9 +1,9 @@
 <div class="question-card d-flex align-items-center justify-content-center">
     <div class="q-card">
-        <h3 class="f-main text-center mb-5">Pregunta {{questions[num]["id"]}}</h3>
-        <p class="question_quote text-center mb-5 f-main-dark">{{questions[num]["question"]}}</p>
+        <h3 class="f-main text-center my-3 my-lg-0 mb-lg-5 f-600">Pregunta {{questions[num]["id"]}}</h3>
+        <p class="question_quote text-center mb-3 mb-lg-5s f-main-dark">{{questions[num]["question"]}}</p>
         <div class="pointers text-center">
-            <button class="btn" *ngFor="let point of points"
+            <button class="btn f-white bold" *ngFor="let point of points"
                 [ngClass]="{'selected': pxq[num]!=null && pxq[num]['grade']==point, 'unSelected':pxq[num]!=null && pxq[num]['grade']!=point, 'bg-second': num%2==0, 'bg-main': num%2!=0 }"
                 (click)="selectPoint(point,num)">
                 {{point}}
@@ -11,6 +11,6 @@
         </div>
     </div>
 </div>
-<div class="p-4">
+<div class="p-4 py-lg-0">
     <app-operational-buttons [num]="num"></app-operational-buttons>
 </div>

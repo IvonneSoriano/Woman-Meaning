@@ -1,17 +1,20 @@
 @import '../assets/scss/theme';
-.main{
+
+.main {
     height: 100vh;
     background-image: url(../assets/img/bg.jpg);
     background-position: center;
     background-size: cover;
-    .chart{
+    .chart {
         background-color: white;
         height: calc(100vh - 250px);
-        .panel{
+        box-shadow: 3px 3px 8px rgba(0,0,0,0.12);
+        .panel {
             position: relative;
             height: calc(100% - 82px);
             overflow: hidden;
-            .panel__item{
+
+            .panel__item {
                 width: 100%;
                 height: 100%;
                 display: block;
@@ -20,16 +23,28 @@
                 top: 0;
                 bottom: 0;
                 transition: 0.3s;
-                &.questions{
+
+                &.questions {
                     height: 100%;
                 }
-                &.results{
+
+                &.results {
                     background-color: white;
                 }
-                &.active{
+
+                &.active {
                     left: 0;
                 }
             }
+        }
+    }
+    @media (max-width:768px){
+        height: auto;
+        h1{
+            text-align: center;
+        }
+        .chart {
+            height: 470px;
         }
     }
 }

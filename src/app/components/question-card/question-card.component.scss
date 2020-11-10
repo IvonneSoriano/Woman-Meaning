@@ -1,6 +1,6 @@
 .question-card {
     width: 100%;
-    height: 80%;
+    height: 76%;
     .question_quote{
         max-width: 600px;
     }
@@ -16,6 +16,11 @@
         }
         &.unSelected{
             opacity: 0.8;
+        }
+    }
+    @media (max-width:768px) {
+        .q-card{
+            padding: 0px 10px;
         }
     }
 }

@@ -1,0 +1,21 @@
+.cont{
+    position: relative;
+    height: 100%;
+
+    .float-flower {
+        position: absolute;
+        background-image: url(../../../assets/img/bouquet.png);
+        background-position: center;
+        background-size: cover;
+        height: 150px;
+        width: 129px;
+        &.up{
+            top:  0px;
+            left: 0px;
+        }
+        &.down{
+            bottom: 0px;
+            right: 0px;
+        }
+    }
+}
