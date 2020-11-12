@@ -7,7 +7,7 @@ import { CalculatePointService } from './services/calculate-point.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'La mujer y su significado';
+  title = 'La Mujer y Su Significado';
 
   public question:boolean = true;
 
