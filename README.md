@@ -1,27 +1,29 @@
-# WomanANDMeaning
+# La Mujer y Su Significado
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.5.
+Este proyecto ha sido creado para automatizar el proceso de evaluación personal que se hace en el libro de CRU **La Mujer y Su Significado**. Este cuenta con preguntas, las cuales se van respondiendo una a una, y al finalizar, se podrá observar un gráfico con el porcentaje de puntos en cada uno de los aspectos evaluados.
 
-## Development server
+## Desarrollado con
+- [Angular v10](https://angular.io/docs "Angular v10")
+- [Bootstrap v4](https://getbootstrap.com/ "Bootstrap v4")
+- [Chart.js](https://www.chartjs.org/ "Chart.js")
+- [Sass](https://sass-lang.com/ "Sass")
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Instalando el proyecto
+A continuación se darán las indicaciones para la instalación del proyecto, se debe tener *angular cli* previamente instalado, y también *node.js*.
 
-## Code scaffolding
+### Instalación
+1. Clonar el proyecto del repo.
+`git clone https://github.com/IvonneSoriano/Woman-Meaning.git`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+2. Sobre la raíz del proyecto, se deben instalar las dependencias.
+`npm install`
 
-## Build
+3. Ejecutar localmente la aplicación
+`ng serve `
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Uso
+Este repo es privado, por lo tanto, no tiene uso externo de Indigitous LAC y CRU.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Contacto
+:fa-code: Ivonne Sánchez - [:fa-github: IvonneSoriano](https://github.com/IvonneSoriano "IvonneSoriano") - [:fa-linkedin-square:](https://www.linkedin.com/in/ivonnesanchez25/ "IvonneSanchez")
+:fa-envelope: Correo de Contacto - ivonnesanchez2598@gmail.com
