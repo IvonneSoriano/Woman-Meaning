@@ -1,0 +1,123 @@
+@import './theme';
+
+@import url('https://fonts.googleapis.com/css2?family=Rasa:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+ .dancing{
+    font-family: 'Dancing Script', cursive;
+ }
+ .f-600{
+     font-weight: 600;
+ }
+body{
+    font-family: 'Rasa', serif;
+}
+
+.f-main{
+    color: $main;
+}
+
+.f-main-dark{
+    color: $main-dark;
+}
+
+.f-main-light{
+    color: $main-light;
+}
+.f-white{
+    color: white!important;
+}
+.f-secondary{
+    color: $secondary;
+}
+.f-secondary-dark{
+    color: $secondary-dark;
+}
+.bg-main{
+    background-color: $main;
+}
+
+.bg-second{
+    background-color: $secondary!important;
+    &:hover{
+        background-color: $secondary-dark!important;
+    }
+    &.selected{
+        background-color: $secondary-dark!important;
+    }
+}
+
+
+
+.tab{
+    @extend .dancing;
+    padding: 5px 10px;
+    border: none;
+    display: block;
+    width: 100%;
+    position: relative;
+    font-size: 1.5rem;
+    background-color: rgba($color:$secondary, $alpha:0.2);
+    .icon{
+        display: block;
+        img{
+         
+        width: 25px;
+        height: 25px;
+        }
+    }
+    &.q{
+        &::after{
+            right: 0;
+            left: unset;
+        }
+    }
+
+    &::after{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        height: 3px;
+        background-color: $main;
+        width: 0%;
+        left: 0;
+        transition: 0.3s ;
+    }
+ 
+    &:hover{
+        background-color: rgba($color:$secondary, $alpha:0.7);
+    }
+    &.active{
+        background-color: rgba($color:$secondary, $alpha:0.5);
+        box-shadow: 0px 0 8px rgba(0,0,0,0.16);
+        &::after{
+            height: 3px;
+            width: 100%;
+        }
+    }
+}
+
+.btn.focus, .btn:focus{
+    box-shadow: none!important;
+}
+
+.btn{
+    border: none;
+    border-radius: 0;
+    transition: all 0.3s ease!important;
+    &.bg-main{
+        background-color: $main;
+        &:hover{
+            background-color: $main-light!important;
+        }
+        &.selected{
+            background-color: $main-light!important;
+        }
+    }
+    &.square{
+
+        &:hover{
+            border-radius:15px ;
+        }
+    }
+}
+
