@@ -5,13 +5,14 @@
     background-image: url(../assets/img/bg.jpg);
     background-position: center;
     background-size: cover;
+
     .chart {
         background-color: white;
         height: calc(100vh - 250px);
         box-shadow: 3px 3px 8px rgba(0,0,0,0.12);
         .panel {
             position: relative;
-            height: calc(100% - 82px);
+            height: 100%;
             overflow: hidden;
 
             .panel__item {
@@ -39,7 +40,10 @@
         }
     }
     @media (max-width:768px){
-        height: auto;
+        // height: auto;
+        .container{
+            height: calc(100% - 97px);
+        }
         h1{
             text-align: center;
         }
@@ -47,4 +51,11 @@
             height: 470px;
         }
     }
+    @media (max-width:600px){
+        height: auto;
+        .container{
+            height: auto;
+        }
+    }
+    
 }

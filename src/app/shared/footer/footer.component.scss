@@ -1,9 +1,17 @@
-@import '../../../assets/scss/general';
-.footer{
-    background-color: $main-dark;
+.footer {
+    background-color: white;
     height: 50px;
     position: absolute;
     bottom: 0;
+
+    .logo-img {
+        height: 30px;
+
+        img {
+            max-height: 100%;
+        }
+    }
+
     @media (max-width:768px) {
         position: relative;
     }
