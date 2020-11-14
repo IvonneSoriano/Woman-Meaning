@@ -62,7 +62,7 @@ export const questions:Question[] = [
     },
     {
      id:12,
-     question: "Mi colesteros/presión sanguínea están en niveles saludables.",
+     question: "Mi colesterol/presión sanguínea están en niveles saludables.",
      type: 2
     },
     {
