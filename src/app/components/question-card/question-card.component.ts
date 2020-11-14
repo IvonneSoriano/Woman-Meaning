@@ -47,7 +47,7 @@ export class QuestionCardComponent implements OnInit {
       setTimeout(() => { this.questionsService.$num.emit(true); }, 500);
     }
     else {
-      this.questionsService.$lastQuestion.emit(true);
+      setTimeout(() => this.calculatePoint.$save.emit(true), 300 );
     }
 
 
