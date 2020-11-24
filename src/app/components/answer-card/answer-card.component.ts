@@ -57,7 +57,7 @@ export class AnswerCardComponent implements OnInit {
         datasets: [{
           label: 'Rueda de la vida',
           data: this.data,
-          backgroundColor: "rgba(242, 196, 213, 0.5)",
+          backgroundColor: "rgba(242, 196, 213, 0.1)",
           borderColor: "#F2ACC6",
           borderWidth: 1
         }]
